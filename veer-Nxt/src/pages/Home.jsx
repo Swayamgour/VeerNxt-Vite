@@ -28,6 +28,8 @@ function Home() {
             <main>
                 <Hero />
                 <KhakiSection />
+
+                
                 <Features />
                 <AcademySection />
             </main>
