@@ -1,0 +1,200 @@
+.footer {
+    background: #2d2b1f;
+    color: #dcd9ce;
+    font-family: "Oswald", sans-serif;
+}
+
+/* ================= TOP BAR ================= */
+
+.topBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background: linear-gradient(to right, #2d2b1f, #1a1a1a);
+}
+
+/* LOGO */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon {
+    font-size: 28px;
+    color: #9f3e2e;
+}
+
+.logo img {
+    height: 80px;
+}
+
+
+
+/* BACK TO TOP BUTTON */
+.backToTop {
+    position: relative;
+    background: #9f3e2e;
+    padding: 18px 40px;
+    cursor: pointer;
+
+    text-transform: uppercase;
+    font-size: 13px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* angled effect */
+.backToTop::before {
+    content: "";
+    position: absolute;
+    left: -30px;
+    top: 0;
+    width: 60px;
+    height: 100%;
+    background: #9f3e2e;
+    transform: skewX(-20deg);
+}
+
+/* ================= MAIN ================= */
+
+.main {
+    position: relative;
+    display: flex;
+    padding: 50px 8%;
+    background: #3a3728;
+    overflow: hidden;
+}
+
+/* ===== SLANTED BACKGROUND ===== */
+.main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 25%;
+  width: 120%; /* extra width do */
+  height: 100%;
+  background: #4a4632;
+  transform: skewX(-20deg);
+  transform-origin: top left;
+  z-index: 1;
+}
+
+/* ================= LEFT MENU ================= */
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 200px;
+    z-index: 2;
+    position: relative;
+}
+
+.menu li {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #cfc7a4;
+    transition: 0.3s;
+}
+
+.menu li:hover {
+    color: #fff;
+}
+
+/* ================= RIGHT ================= */
+
+.right {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    margin-left: 80px;
+    position: relative;
+    z-index: 2;
+}
+
+/* COLUMN */
+.column h3 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.column p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* MAP LINK */
+.link {
+    color: #cfc7a4;
+    cursor: pointer;
+}
+
+/* ================= SOCIAL ================= */
+
+.social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.social span {
+    width: 40px;
+    height: 40px;
+    background: #5a5743;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 12px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.social span:hover {
+    background: #9f3e2e;
+    color: #fff;
+}
+
+/* ================= COPYRIGHT ================= */
+
+.copy {
+    background: #111;
+    padding: 15px 8%;
+    font-size: 13px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .main::before {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .right {
+        grid-template-columns: 1fr;
+        margin-left: 0;
+        margin-top: 30px;
+    }
+
+    .topBar {
+        flex-direction: column;
+        gap: 15px;
+    }
+}

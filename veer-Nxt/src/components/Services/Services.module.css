@@ -1,0 +1,91 @@
+.services {
+  padding: var(--spacing-xxl) var(--spacing-xl);
+  background: linear-gradient(135deg, #1a1a1a, var(--military-dark));
+  color: var(--military-white);
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.sectionHeader h2 {
+  font-family: var(--font-military);
+  font-size: 42px;
+  color: var(--military-white);
+}
+
+.highlight {
+  color: var(--military-gold);
+}
+
+.sectionHeader p {
+  color: var(--military-gray-light);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  transition: var(--transition-normal);
+  border: 1px solid rgba(255,255,255,0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(196,169,109,0.1), transparent);
+  opacity: 0;
+  transition: var(--transition-normal);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--military-gold);
+}
+
+.image {
+  font-size: 56px;
+  margin-bottom: var(--spacing-md);
+}
+
+.badge {
+  position: absolute;
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+  background: var(--military-gold);
+  color: var(--military-dark);
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.card h3 {
+  font-size: 24px;
+  margin-bottom: var(--spacing-sm);
+}
+
+.card p {
+  color: var(--military-gray-light);
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.6;
+}

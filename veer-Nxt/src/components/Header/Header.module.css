@@ -1,0 +1,403 @@
+/* ================= HEADER ================= */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 80px;
+}
+
+/* ================= LOGO ================= */
+.logo {
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.logo img {
+    height: 60px;
+    padding-left: 30px;
+}
+
+/* ================= DESKTOP NAVIGATION ================= */
+.desktopNav {
+    background: #696239;
+    position: relative;
+    height: 100%;
+}
+
+/* LEFT SLANT DESIGN */
+.desktopNav::before {
+    content: "";
+    position: absolute;
+    left: -40px;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    background: #696239;
+    transform: skewX(-20deg);
+    z-index: -1;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    height: 100%;
+    margin: 0;
+    padding: 0 20px 0 40px;
+}
+
+.menu li {
+    position: relative;
+    padding: 0 20px;
+    color: #efe7d5;
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    height: 80px;
+}
+
+.menu li:hover {
+    background: #9f3e2e;
+    color: #fff;
+}
+
+/* ================= DESKTOP DROPDOWN ================= */
+.dropdown {
+    position: relative;
+}
+
+.dropdown span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.dropdown span::after {
+    content: "▼";
+    font-size: 10px;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #9f3e2e;
+    min-width: 220px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 100;
+}
+
+.submenu li {
+    padding: 12px 20px;
+    font-size: 13px;
+    height: auto;
+    white-space: nowrap;
+}
+
+.submenu li:hover {
+    background: #893426;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+/* ================= HAMBURGER BUTTON ================= */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1001;
+    padding-right: 30px;
+}
+
+/* ================= OVERLAY (for mobile) ================= */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    backdrop-filter: blur(3px);
+}
+
+/* ================= MOBILE SIDEBAR MENU ================= */
+.mobileMenu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 85%;
+    max-width: 350px;
+    height: 100vh;
+    background: #2d2b1f;
+    z-index: 1002;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+/* Mobile Menu Header */
+.mobileHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #4a4632;
+    background: #1a1a1a;
+}
+
+.mobileLogo img {
+    height: 45px;
+}
+
+.closeBtn {
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closeBtn:hover {
+    color: #9f3e2e;
+}
+
+/* Mobile Menu List */
+.mobileMenuList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobileMenuList li {
+    padding: 16px 20px;
+    color: #efe7d5;
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+    border-bottom: 1px solid #4a4632;
+}
+
+.mobileMenuList li:hover {
+    background: #9f3e2e;
+    color: #fff;
+    padding-left: 30px;
+}
+
+/* Mobile Dropdown */
+.mobileDropdown {
+    padding: 0 !important;
+}
+
+.mobileDropdownBtn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.mobileDropdownBtn:hover {
+    background: #9f3e2e;
+    color: #fff;
+}
+
+.arrow {
+    font-size: 12px;
+    transition: transform 0.3s;
+}
+
+.mobileSubmenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #1a1a1a;
+}
+
+.mobileSubmenu li {
+    padding: 12px 20px 12px 35px !important;
+    font-size: 13px;
+    border-bottom: 1px solid #3a3728;
+}
+
+.mobileSubmenu li:hover {
+    background: #9f3e2e;
+    padding-left: 45px !important;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 992px) {
+    .menu li {
+        padding: 0 15px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        height: 70px;
+    }
+
+    .logo img {
+        height: 50px;
+        padding-left: 20px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    /* Hide desktop nav on mobile */
+    .desktopNav {
+        display: none;
+    }
+
+    /* Remove slant from desktop nav */
+    .desktopNav::before {
+        display: none;
+    }
+}
+
+/* Mobile Landscape (480px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .mobileMenu {
+        width: 70%;
+        max-width: 320px;
+    }
+}
+
+/* Mobile Small (below 480px) */
+@media (max-width: 480px) {
+    .header {
+        height: 60px;
+    }
+
+    .logo img {
+        height: 40px;
+        padding-left: 15px;
+    }
+
+    .hamburger {
+        font-size: 20px;
+        padding-right: 15px;
+    }
+
+    .mobileMenu {
+        width: 85%;
+    }
+
+    .mobileHeader {
+        padding: 15px;
+    }
+
+    .mobileLogo img {
+        height: 35px;
+    }
+
+    .closeBtn {
+        font-size: 20px;
+    }
+
+    .mobileMenuList li {
+        padding: 14px 15px;
+        font-size: 13px;
+    }
+
+    .mobileDropdownBtn {
+        padding: 14px 15px;
+    }
+
+    .mobileSubmenu li {
+        padding: 10px 15px 10px 30px !important;
+        font-size: 12px;
+    }
+}
+
+/* Desktop (above 768px) */
+@media (min-width: 769px) {
+    .mobileMenu {
+        display: none;
+    }
+
+    .overlay {
+        display: none;
+    }
+}
+
+/* Animation for menu items */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobileMenuList li {
+    animation: slideIn 0.3s ease forwards;
+    opacity: 0;
+}
+
+.mobileMenuList li:nth-child(1) {
+    animation-delay: 0.05s;
+}
+
+.mobileMenuList li:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.mobileMenuList li:nth-child(3) {
+    animation-delay: 0.15s;
+}
+
+.mobileMenuList li:nth-child(4) {
+    animation-delay: 0.2s;
+}
+
+.mobileMenuList li:nth-child(5) {
+    animation-delay: 0.25s;
+}
+
+.mobileMenuList li:nth-child(6) {
+    animation-delay: 0.3s;
+}
+
+.mobileMenuList li:nth-child(7) {
+    animation-delay: 0.35s;
+}
+
+/* Scrollbar Styling for Mobile Menu */
+.mobileMenu::-webkit-scrollbar {
+    width: 4px;
+}
+
+.mobileMenu::-webkit-scrollbar-track {
+    background: #2d2b1f;
+}
+
+.mobileMenu::-webkit-scrollbar-thumb {
+    background: #9f3e2e;
+    border-radius: 4px;
+}

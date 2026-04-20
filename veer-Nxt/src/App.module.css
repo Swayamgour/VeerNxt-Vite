@@ -1,0 +1,28 @@
+.app {
+  overflow-x: hidden;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+body{
+  margin: 0px !important;
+}
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--military-gray-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--military-olive);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--military-camo);
+}

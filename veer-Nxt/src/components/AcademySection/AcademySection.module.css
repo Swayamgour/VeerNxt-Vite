@@ -1,0 +1,428 @@
+/* ================= SECTION ================= */
+.section {
+    background: #e9dfc9;
+    padding: 80px 0;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+    width: 85%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+}
+
+/* ================= LEFT SECTION ================= */
+.left h2 {
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    /* font-size: 20px; */
+}
+
+.imageBox img {
+    width: 100%;
+    border: 5px solid #f2ead7;
+    height: auto;
+    display: block;
+}
+
+.left p {
+    margin: 20px 0;
+    color: #555;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.btn {
+    background: #55523e;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background: #9f3e2e;
+}
+
+/* ================= MIDDLE SECTION ================= */
+.middle h3 {
+    font-family: "Oswald", sans-serif;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.newsItem {
+    margin-bottom: 15px;
+}
+
+.newsItem h5 {
+    font-size: 14px;
+    color: #696239;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.newsItem span {
+    font-size: 12px;
+    color: #888;
+}
+
+.divider {
+    border-bottom: 1px dashed #bdb7a0;
+    margin: 15px 0;
+}
+
+.archive {
+    display: inline-block;
+    margin-top: 15px;
+    color: #9f3e2e;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.archive:hover {
+    color: #55523e;
+    text-decoration: underline;
+}
+
+/* ================= RIGHT SECTION ================= */
+.right h2 {
+    font-family: "Oswald", sans-serif;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list li {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+/* NUMBER CIRCLE */
+.list span {
+    width: 50px;
+    height: 50px;
+    background: #9f3e2e;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.list h4 {
+    font-family: "Oswald", sans-serif;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.list p {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* ================= FULLY RESPONSIVE ================= */
+
+/* Tablet Landscape (992px - 1200px) */
+@media (max-width: 1200px) {
+    .container {
+        width: 90%;
+        gap: 40px;
+    }
+    
+    /* .left h2 {
+        font-size: 24px;
+    } */
+    
+    .middle h3,
+    .right h2 {
+        font-size: 22px;
+    }
+}
+
+/* Tablet Portrait (768px - 991px) */
+@media (max-width: 991px) {
+    .section {
+        padding: 60px 0;
+    }
+    
+    .container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        width: 85%;
+    }
+    
+    .left {
+        text-align: center;
+    }
+    
+    .imageBox img {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .left p {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .middle {
+        text-align: center;
+    }
+    
+    .newsItem {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .right {
+        text-align: center;
+    }
+    
+    .list li {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+    }
+}
+
+/* Mobile Large (576px - 767px) */
+@media (max-width: 767px) {
+    .section {
+        padding: 50px 0;
+    }
+    
+    .container {
+        width: 90%;
+        gap: 40px;
+    }
+    
+    /* .left h2 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    } */
+    
+    .imageBox img {
+        border-width: 3px;
+    }
+    
+    .left p {
+        font-size: 13px;
+        margin: 15px 0;
+    }
+    
+    .btn {
+        padding: 8px 20px;
+        font-size: 13px;
+    }
+    
+    .middle h3,
+    .right h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .newsItem h5 {
+        font-size: 13px;
+    }
+    
+    .list li {
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .list span {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+    }
+    
+    .list h4 {
+        font-size: 14px;
+    }
+    
+    .list p {
+        font-size: 12px;
+    }
+}
+
+/* Mobile Small (below 575px) */
+@media (max-width: 575px) {
+    .section {
+        padding: 40px 0;
+    }
+    
+    .container {
+        width: 92%;
+        gap: 35px;
+    }
+    
+    /* .left h2 {
+        font-size: 20px;
+    } */
+    
+    .imageBox img {
+        border-width: 2px;
+    }
+    
+    .left p {
+        font-size: 12px;
+        margin: 12px 0;
+    }
+    
+    .btn {
+        padding: 6px 16px;
+        font-size: 12px;
+    }
+    
+    .middle h3,
+    .right h2 {
+        font-size: 18px;
+    }
+    
+    .newsItem {
+        margin-bottom: 12px;
+    }
+    
+    .newsItem h5 {
+        font-size: 12px;
+    }
+    
+    .newsItem span {
+        font-size: 10px;
+    }
+    
+    .divider {
+        margin: 12px 0;
+    }
+    
+    .archive {
+        font-size: 13px;
+    }
+    
+    .list li {
+        gap: 12px;
+        margin-bottom: 18px;
+    }
+    
+    .list span {
+        width: 35px;
+        height: 35px;
+        font-size: 12px;
+    }
+    
+    .list h4 {
+        font-size: 13px;
+    }
+    
+    .list p {
+        font-size: 11px;
+    }
+}
+
+/* Extra Small Devices (below 375px) */
+@media (max-width: 375px) {
+    .section {
+        padding: 30px 0;
+    }
+    
+    .container {
+        width: 95%;
+        gap: 30px;
+    }
+    
+    /* .left h2 {
+        font-size: 18px;
+    } */
+    
+    .middle h3,
+    .right h2 {
+        font-size: 16px;
+    }
+    
+    .list li {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 8px;
+    }
+    
+    .list span {
+        width: 30px;
+        height: 30px;
+        font-size: 11px;
+    }
+    
+    .list h4 {
+        font-size: 12px;
+    }
+}
+
+/* Large Desktop (above 1400px) */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1400px;
+        width: 80%;
+        gap: 60px;
+    }
+    
+    /* .left h2 {
+        font-size: 32px;
+    } */
+    
+    .middle h3,
+    .right h2 {
+        font-size: 24px;
+    }
+    
+    .left p {
+        font-size: 15px;
+    }
+    
+    .newsItem h5 {
+        font-size: 15px;
+    }
+    
+    .list h4 {
+        font-size: 18px;
+    }
+    
+    .list p {
+        font-size: 14px;
+    }
+}
+
+/* Print Styles (optional) */
+@media print {
+    .section {
+        background: white;
+        padding: 20px 0;
+    }
+    
+    .btn {
+        display: none;
+    }
+    
+    .archive {
+        color: black;
+    }
+}

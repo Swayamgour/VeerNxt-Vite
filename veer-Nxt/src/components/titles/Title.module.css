@@ -1,0 +1,60 @@
+.titleSection {
+    text-align: center;
+    padding: 40px 0 10px;
+}
+
+/* TITLE */
+.titleSection h1 {
+    font-family: "Oswald", sans-serif;
+    font-size: 36px;
+    color: #696239;
+    text-transform: uppercase;
+    line-height: 1;
+    position: relative;
+}
+
+/* BOTH SIDE DECOR */
+.titleSection h1::before,
+.titleSection h1::after {
+    content: "";
+    display: inline-block;
+
+    width: 41px;
+    height: 12px;
+
+    background-image: url("/src/assets/title-decor-dark.png");
+    background-repeat: no-repeat;
+
+    vertical-align: top;
+    margin-top: 13px;
+}
+
+/* LEFT IMAGE */
+.titleSection h1::before {
+    background-position: 0 0;
+    margin-right: 20px;
+}
+
+/* RIGHT IMAGE */
+.titleSection h1::after {
+    background-position: 0 -12px;
+    margin-left: 20px;
+}
+
+
+
+.breadcrumb {
+    background: url("/src/assets/bg-main-dark.jpg");
+    color: #cbbf9d;
+    padding: 12px 5%;
+    text-align: right;
+    font-size: 14px;
+}
+
+.breadcrumb span {
+    margin-left: 10px;
+}
+
+.active {
+    color: #fff;
+}

@@ -1,0 +1,501 @@
+/* ================= GALLERY SECTION ================= */
+.gallerySection {
+    background: url("/src/assets/bg-main-light.jpg") #e9dfc9;
+    padding: 0 0 60px;
+    font-family: "Roboto", sans-serif;
+    min-height: 100vh;
+}
+
+/* ================= BREADCRUMBS ================= */
+.breadcrumbs {
+    padding: 15px 8%;
+    background: rgba(0, 0, 0, 0.03);
+    font-size: 12px;
+    color: #888;
+    border-bottom: 1px solid #d6cbb0;
+}
+
+.breadcrumbs span {
+    margin: 0 5px;
+}
+
+.breadcrumbs .active {
+    color: #9f3e2e;
+    font-weight: 500;
+}
+
+/* ================= TITLE SECTION ================= */
+.title {
+    text-align: center;
+    padding: 50px 20px 30px;
+}
+
+.title h1 {
+    font-family: "Oswald", sans-serif;
+    font-size: 36px;
+    color: #696239;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+}
+
+/* DECORATIVE LINES */
+.title h1::before,
+.title h1::after {
+    content: "";
+    display: inline-block;
+    width: 41px;
+    height: 12px;
+    background: url("/src/assets/title-decor-dark.png") no-repeat;
+    vertical-align: middle;
+}
+
+.title h1::before {
+    margin-right: 20px;
+    background-position: 0 0;
+}
+
+.title h1::after {
+    margin-left: 20px;
+    background-position: 0 -12px;
+}
+
+/* ================= FILTER BUTTONS ================= */
+.filters {
+    text-align: center;
+    margin: 20px 0 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 20px;
+}
+
+.filters button {
+    padding: 10px 28px;
+    border: none;
+    background: #d6cbb0;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    font-family: "Oswald", sans-serif;
+    border-radius: 2px;
+}
+
+.filters button:hover {
+    background: #9f3e2e;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.activeFilter {
+    background: #4a4632 !important;
+    color: white;
+    position: relative;
+}
+
+.activeFilter::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 2px;
+    background: #9f3e2e;
+}
+
+/* ================= GALLERY GRID ================= */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    width: 85%;
+    margin: 0 auto;
+    padding: 0 0 40px;
+}
+
+/* ================= CARD ================= */
+.card {
+    background: transparent;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* IMAGE WRAPPER */
+.imageWrap {
+    position: relative;
+    overflow: hidden;
+    border: 4px solid #d6cbb0;
+    border-radius: 4px;
+}
+
+.imageWrap img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    display: block;
+}
+
+/* ZOOM EFFECT ON HOVER */
+.imageWrap:hover img {
+    transform: scale(1.1);
+}
+
+/* OVERLAY WITH ZOOM ICON */
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(159, 62, 46, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.imageWrap:hover .overlay {
+    opacity: 1;
+}
+
+.zoomIcon {
+    font-size: 32px;
+    color: white;
+    transform: scale(0.5);
+    transition: transform 0.3s ease;
+}
+
+.imageWrap:hover .zoomIcon {
+    transform: scale(1);
+}
+
+/* CAPTION */
+.caption {
+    padding: 14px 10px;
+    background: #4a4632;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 8px;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.card:hover .caption {
+    background: #9f3e2e;
+}
+
+/* ================= SHOW MORE BUTTON ================= */
+.showMore {
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.showMoreBtn {
+    background: #4a4632;
+    color: white;
+    border: none;
+    padding: 12px 35px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "Oswald", sans-serif;
+    border-radius: 2px;
+}
+
+.showMoreBtn:hover {
+    background: #9f3e2e;
+    transform: translateY(-2px);
+}
+
+/* ================= FULLY RESPONSIVE ================= */
+
+/* Tablet Landscape (992px - 1200px) */
+@media (max-width: 1200px) {
+    .grid {
+        width: 90%;
+        gap: 20px;
+    }
+
+    .imageWrap img {
+        height: 220px;
+    }
+}
+
+/* Tablet Portrait (768px - 991px) */
+@media (max-width: 991px) {
+    .breadcrumbs {
+        padding: 12px 5%;
+    }
+
+    .title {
+        padding: 40px 20px 25px;
+    }
+
+    .title h1 {
+        font-size: 30px;
+    }
+
+    .title h1::before,
+    .title h1::after {
+        width: 35px;
+        height: 10px;
+        background-size: cover;
+    }
+
+    .title h1::before {
+        margin-right: 15px;
+    }
+
+    .title h1::after {
+        margin-left: 15px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        width: 90%;
+        gap: 20px;
+    }
+
+    .imageWrap img {
+        height: 200px;
+    }
+
+    .filters button {
+        padding: 8px 22px;
+        font-size: 12px;
+    }
+}
+
+/* Mobile Large (576px - 767px) */
+@media (max-width: 767px) {
+    .gallerySection {
+        padding: 0 0 50px;
+    }
+
+    .breadcrumbs {
+        padding: 10px 4%;
+        font-size: 11px;
+    }
+
+    .title {
+        padding: 30px 15px 20px;
+    }
+
+    .title h1 {
+        font-size: 24px;
+    }
+
+    .title h1::before,
+    .title h1::after {
+        width: 25px;
+        height: 8px;
+    }
+
+    .title h1::before {
+        margin-right: 10px;
+    }
+
+    .title h1::after {
+        margin-left: 10px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%;
+        gap: 18px;
+    }
+
+    .imageWrap img {
+        height: 180px;
+    }
+
+    .caption {
+        padding: 10px 8px;
+        font-size: 12px;
+    }
+
+    .filters {
+        gap: 8px;
+        margin: 15px 0 30px;
+    }
+
+    .filters button {
+        padding: 6px 18px;
+        font-size: 11px;
+    }
+
+    .showMoreBtn {
+        padding: 10px 30px;
+        font-size: 12px;
+    }
+}
+
+/* Mobile Small (below 576px) */
+@media (max-width: 576px) {
+    .gallerySection {
+        padding: 0 0 40px;
+    }
+
+    .breadcrumbs {
+        padding: 8px 4%;
+        font-size: 10px;
+    }
+
+    .title {
+        padding: 25px 10px 15px;
+    }
+
+    .title h1 {
+        font-size: 20px;
+    }
+
+    .title h1::before,
+    .title h1::after {
+        width: 20px;
+        height: 6px;
+    }
+
+    .title h1::before {
+        margin-right: 8px;
+    }
+
+    .title h1::after {
+        margin-left: 8px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        width: 85%;
+        gap: 25px;
+    }
+
+    .imageWrap img {
+        height: 220px;
+    }
+
+    .caption {
+        padding: 12px;
+        font-size: 13px;
+    }
+
+    .filters {
+        gap: 8px;
+        padding: 0 15px;
+    }
+
+    .filters button {
+        padding: 6px 14px;
+        font-size: 10px;
+    }
+
+    .activeFilter::after {
+        width: 20px;
+        bottom: -3px;
+    }
+
+    .showMoreBtn {
+        padding: 8px 25px;
+        font-size: 11px;
+    }
+
+    .zoomIcon {
+        font-size: 24px;
+    }
+}
+
+/* Extra Small (below 375px) */
+@media (max-width: 375px) {
+    .title h1 {
+        font-size: 18px;
+    }
+
+    .title h1::before,
+    .title h1::after {
+        display: none;
+    }
+
+    .filters button {
+        padding: 5px 12px;
+        font-size: 9px;
+    }
+
+    .imageWrap img {
+        height: 180px;
+    }
+
+    .caption {
+        padding: 8px;
+        font-size: 11px;
+    }
+}
+
+/* Desktop Large (above 1400px) */
+@media (min-width: 1400px) {
+    .grid {
+        max-width: 1400px;
+        width: 80%;
+        gap: 30px;
+    }
+
+    .title h1 {
+        font-size: 42px;
+    }
+
+    .imageWrap img {
+        height: 280px;
+    }
+
+    .caption {
+        padding: 16px;
+        font-size: 15px;
+    }
+
+    .filters button {
+        padding: 12px 35px;
+        font-size: 14px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .gallerySection {
+        background: white;
+    }
+
+    .breadcrumbs,
+    .filters,
+    .overlay,
+    .showMore {
+        display: none;
+    }
+
+    .card {
+        break-inside: avoid;
+    }
+
+    .imageWrap {
+        border: 1px solid #ccc;
+    }
+
+    .caption {
+        background: #eee;
+        color: black;
+    }
+}

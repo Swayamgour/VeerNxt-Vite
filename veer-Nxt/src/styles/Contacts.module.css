@@ -1,0 +1,647 @@
+/* ================= CONTACTS SECTION ================= */
+.contactsSection {
+    background: url("/src/assets/bg-main-light.jpg") #e9dfc9;
+    font-family: "Roboto", sans-serif;
+    color: #55523e;
+    min-height: 100vh;
+}
+
+/* ================= BREADCRUMBS ================= */
+.breadcrumbs {
+    padding: 15px 8%;
+    background: rgba(0, 0, 0, 0.03);
+    font-size: 12px;
+    color: #888;
+    border-bottom: 1px solid #d6cbb0;
+}
+
+.breadcrumbs span {
+    margin: 0 5px;
+}
+
+.breadcrumbs .active {
+    color: #9f3e2e;
+    font-weight: 500;
+}
+
+/* ================= TITLE SECTION ================= */
+.title {
+    text-align: center;
+    padding: 50px 20px 30px;
+}
+
+.title h1 {
+    font-family: "Oswald", sans-serif;
+    font-size: 36px;
+    color: #696239;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+}
+
+/* DECORATIVE LINES */
+.title h1::before,
+.title h1::after {
+    content: "";
+    display: inline-block;
+    width: 41px;
+    height: 12px;
+    background: url("/src/assets/title-decor-dark.png") no-repeat;
+    vertical-align: middle;
+}
+
+.title h1::before {
+    margin-right: 20px;
+    background-position: 0 0;
+}
+
+.title h1::after {
+    margin-left: 20px;
+    background-position: 0 -12px;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 8% 60px;
+}
+
+.row {
+    display: flex;
+    gap: 50px;
+}
+
+/* ================= LEFT SECTION (ADDRESS) ================= */
+.left {
+    flex: 1;
+}
+
+.left h2 {
+    font-family: "Oswald", sans-serif;
+    font-size: 22px;
+    color: #696239;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.left h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: #9f3e2e;
+}
+
+/* ADDRESS BOX */
+.addressBox {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.addressBox:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: translateX(5px);
+}
+
+.addressIcon {
+    font-size: 28px;
+    min-width: 45px;
+}
+
+.addressText h3 {
+    font-family: "Oswald", sans-serif;
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+.addressText p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #666;
+    margin: 3px 0;
+}
+
+/* MAP ERROR MESSAGE */
+.mapError {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(159, 62, 46, 0.1);
+    border-left: 4px solid #9f3e2e;
+    border-radius: 4px;
+}
+
+.mapErrorIcon {
+    font-size: 24px;
+}
+
+.mapErrorText p {
+    font-size: 12px;
+    color: #888;
+    margin: 3px 0;
+    line-height: 1.5;
+}
+
+/* ================= RIGHT SECTION (FORM) ================= */
+.right {
+    flex: 1;
+}
+
+.right h2 {
+    font-family: "Oswald", sans-serif;
+    font-size: 22px;
+    color: #696239;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.right h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: #9f3e2e;
+}
+
+/* FORM STYLES */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.formGroup label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #55523e;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.formGroup input,
+.formGroup textarea {
+    padding: 12px 15px;
+    border: 1px solid #d6cbb0;
+    background: #fffef8;
+    font-family: "Roboto", sans-serif;
+    font-size: 13px;
+    color: #55523e;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+    outline: none;
+    border-color: #9f3e2e;
+    box-shadow: 0 0 5px rgba(159, 62, 46, 0.2);
+}
+
+.formGroup input::placeholder,
+.formGroup textarea::placeholder {
+    color: #bbb;
+}
+
+/* SUBMIT BUTTON */
+.submitBtn {
+    background: #4a4632;
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "Oswald", sans-serif;
+    border-radius: 4px;
+    margin-top: 10px;
+    align-self: flex-start;
+}
+
+.submitBtn:hover {
+    background: #9f3e2e;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(159, 62, 46, 0.3);
+}
+
+/* ================= BOTTOM SECTION (EDUCATION) ================= */
+.bottom {
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px solid #d6cbb0;
+}
+
+.educationBox {
+    text-align: center;
+    padding: 30px;
+    background: rgba(74, 70, 50, 0.1);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.educationBox:hover {
+    background: rgba(74, 70, 50, 0.15);
+    transform: translateY(-3px);
+}
+
+.educationIcon {
+    font-size: 48px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.educationBox h3 {
+    font-family: "Oswald", sans-serif;
+    font-size: 20px;
+    color: #696239;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.educationBox p {
+    font-size: 14px;
+    color: #777;
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* ================= FULLY RESPONSIVE ================= */
+
+/* Tablet (768px - 1024px) */
+@media (max-width: 1024px) {
+    .container {
+        padding: 20px 5% 50px;
+    }
+
+    .row {
+        gap: 40px;
+    }
+
+    .title h1 {
+        font-size: 32px;
+    }
+}
+
+/* Tablet Portrait (768px - 991px) */
+@media (max-width: 991px) {
+    .breadcrumbs {
+        padding: 12px 5%;
+    }
+
+    .title {
+        padding: 40px 20px 25px;
+    }
+
+    .title h1 {
+        font-size: 28px;
+    }
+
+    .title h1::before,
+    .title h1::after {
+        width: 35px;
+        height: 10px;
+        background-size: cover;
+    }
+
+    .title h1::before {
+        margin-right: 15px;
+    }
+
+    .title h1::after {
+        margin-left: 15px;
+    }
+
+    .row {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .left h2,
+    .right h2 {
+        font-size: 20px;
+    }
+}
+
+/* Mobile Large (576px - 767px) */
+@media (max-width: 767px) {
+    .breadcrumbs {
+        padding: 10px 4%;
+        font-size: 11px;
+    }
+
+    .title {
+        padding: 30px 15px 20px;
+    }
+
+    .title h1 {
+        font-size: 24px;
+    }
+
+    .title h1::before,
+    .title h1::after {
+        width: 25px;
+        height: 8px;
+    }
+
+    .title h1::before {
+        margin-right: 10px;
+    }
+
+    .title h1::after {
+        margin-left: 10px;
+    }
+
+    .container {
+        padding: 15px 4% 40px;
+    }
+
+    .left h2,
+    .right h2 {
+        font-size: 18px;
+    }
+
+    .addressBox {
+        padding: 12px;
+    }
+
+    .addressIcon {
+        font-size: 24px;
+    }
+
+    .addressText h3 {
+        font-size: 14px;
+    }
+
+    .addressText p {
+        font-size: 12px;
+    }
+
+    .formGroup input,
+    .formGroup textarea {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+
+    .submitBtn {
+        padding: 12px 25px;
+        font-size: 13px;
+    }
+
+    .educationBox {
+        padding: 20px;
+    }
+
+    .educationIcon {
+        font-size: 36px;
+    }
+
+    .educationBox h3 {
+        font-size: 18px;
+    }
+
+    .educationBox p {
+        font-size: 13px;
+    }
+}
+
+/* Mobile Small (below 576px) */
+@media (max-width: 576px) {
+    .breadcrumbs {
+        padding: 8px 4%;
+        font-size: 10px;
+    }
+
+    .title {
+        padding: 25px 10px 15px;
+    }
+
+    .title h1 {
+        font-size: 20px;
+    }
+
+    .title h1::before,
+    .title h1::after {
+        width: 20px;
+        height: 6px;
+    }
+
+    .title h1::before {
+        margin-right: 8px;
+    }
+
+    .title h1::after {
+        margin-left: 8px;
+    }
+
+    .container {
+        padding: 10px 4% 30px;
+    }
+
+    .left h2,
+    .right h2 {
+        font-size: 16px;
+    }
+
+    .left h2::after,
+    .right h2::after {
+        width: 35px;
+        height: 2px;
+    }
+
+    .addressBox {
+        margin-bottom: 15px;
+        padding: 10px;
+    }
+
+    .addressIcon {
+        font-size: 20px;
+        min-width: 35px;
+    }
+
+    .addressText h3 {
+        font-size: 13px;
+    }
+
+    .addressText p {
+        font-size: 11px;
+    }
+
+    .mapError {
+        padding: 12px;
+        margin-top: 20px;
+    }
+
+    .mapErrorIcon {
+        font-size: 18px;
+    }
+
+    .mapErrorText p {
+        font-size: 10px;
+    }
+
+    .formGroup label {
+        font-size: 12px;
+    }
+
+    .formGroup input,
+    .formGroup textarea {
+        padding: 8px 10px;
+        font-size: 11px;
+    }
+
+    .submitBtn {
+        padding: 10px 20px;
+        font-size: 12px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .bottom {
+        margin-top: 40px;
+        padding-top: 30px;
+    }
+
+    .educationBox {
+        padding: 15px;
+    }
+
+    .educationIcon {
+        font-size: 28px;
+    }
+
+    .educationBox h3 {
+        font-size: 16px;
+    }
+
+    .educationBox p {
+        font-size: 12px;
+    }
+}
+
+/* Extra Small (below 375px) */
+@media (max-width: 375px) {
+    .title h1 {
+        font-size: 18px;
+    }
+
+    .title h1::before,
+    .title h1::after {
+        display: none;
+    }
+
+    .addressBox {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+
+    .addressIcon {
+        margin: 0 auto;
+    }
+
+    .mapError {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mapErrorIcon {
+        margin: 0 auto;
+    }
+}
+
+/* Desktop Large (above 1400px) */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1400px;
+        padding: 30px 8% 70px;
+    }
+
+    .title h1 {
+        font-size: 42px;
+    }
+
+    .left h2,
+    .right h2 {
+        font-size: 24px;
+    }
+
+    .addressText h3 {
+        font-size: 18px;
+    }
+
+    .addressText p {
+        font-size: 14px;
+    }
+
+    .formGroup label {
+        font-size: 14px;
+    }
+
+    .formGroup input,
+    .formGroup textarea {
+        padding: 14px 18px;
+        font-size: 14px;
+    }
+
+    .submitBtn {
+        padding: 16px 35px;
+        font-size: 15px;
+    }
+
+    .educationBox h3 {
+        font-size: 22px;
+    }
+
+    .educationBox p {
+        font-size: 15px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .contactsSection {
+        background: white;
+    }
+
+    .breadcrumbs,
+    .submitBtn,
+    .mapError {
+        display: none;
+    }
+
+    .addressBox {
+        break-inside: avoid;
+    }
+
+    .formGroup input,
+    .formGroup textarea {
+        border: 1px solid #ccc;
+        background: white;
+    }
+}

@@ -1,0 +1,87 @@
+.aboutPage {
+    background: #e9dfc9 url("/src/assets/bg-main-light.jpg");
+    /* padding-bottom: 60px;2 */
+}
+
+/* ================= BREADCRUMB ================= */
+
+/* ================= TITLE ================= */
+
+
+/* ================= CONTAINER ================= */
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.container h2 {
+    font-family: "Oswald", sans-serif;
+    color: #40402e;
+    margin-bottom: 20px;
+}
+
+/* ================= CONTENT ================= */
+.content {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* IMAGE */
+.imageBox {
+    flex: 0 0 260px;
+}
+
+.imageBox img {
+    width: 100%;
+    border: 5px solid #f2ead7;
+}
+
+/* TEXT */
+.text {
+    flex: 1;
+}
+
+.text p {
+    color: #55523e;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* BUTTON */
+.btn {
+    background: #55523e;
+    color: #fff;
+    padding: 10px 25px;
+    border: none;
+    cursor: pointer;
+    text-transform: lowercase;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #9f3e2e;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .imageBox {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+    .titleSection h1 {
+        font-size: 26px;
+    }
+
+    .breadcrumb {
+        text-align: center;
+    }
+}
