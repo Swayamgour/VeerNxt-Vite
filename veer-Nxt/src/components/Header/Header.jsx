@@ -3,6 +3,7 @@ import styles from "./Header.module.css";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import logo from "../../assets/logo.png"
 
 export default function Header() {
     const [open, setOpen] = useState(false);
@@ -75,7 +76,7 @@ export default function Header() {
                     onClick={() => goTo("/")}
                     whileHover={{ scale: 1.05 }}
                 >
-                    <img src="/src/assets/logo.png" alt="logo" />
+                    <img src={logo} alt="logo" />
                 </motion.div>
 
                 {/* HAMBURGER BUTTON */}
@@ -95,7 +96,7 @@ export default function Header() {
                         >
                             <div className={styles.mobileHeader}>
                                 <div className={styles.mobileLogo}>
-                                    <img src="/src/assets/logo.png" alt="logo" />
+                                    <img src={logo} alt="logo" />
                                 </div>
                                 <div className={styles.closeBtn} onClick={() => setOpen(false)}>
                                     <FaTimes />

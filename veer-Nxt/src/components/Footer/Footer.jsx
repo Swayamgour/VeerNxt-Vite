@@ -1,6 +1,8 @@
 import styles from "./Footer.module.css";
 import { FaCircleArrowUp } from "react-icons/fa6";
 import { motion } from "framer-motion";
+import logo from "../../assets/logo.png"
+
 
 export default function Footer() {
     return (
@@ -18,7 +20,7 @@ export default function Footer() {
                     className={styles.logo}
                     whileHover={{ scale: 1.05 }}
                 >
-                    <img src="/src/assets/logo.png" alt="logo" />
+                    <img src={logo} alt="logo" />
                 </motion.div>
 
                 <motion.div
